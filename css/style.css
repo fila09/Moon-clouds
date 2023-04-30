@@ -1,0 +1,84 @@
+@import url('reset.css');
+/*--------------------------*/
+body {
+
+}
+/*--------------------------*/
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   position: relative;
+}
+/*--------------------------*/
+
+.page {
+}
+.page__clouds {
+   position: absolute;
+   width: 100%;
+   height: 80%;
+   top: 0;
+   left: 0;
+   display: flex;
+   gap: 10%;
+   justify-content: space-evenly;
+   z-index: 2;
+
+   animation: clouds-show 1s ease forwards;
+}
+.page__cloud {
+   transform-origin: top;
+}
+
+.page__cloud:first-child {
+   animation: clouds 7s infinite ease-in-out alternate;
+}
+.page__cloud:last-child {
+   animation: clouds 6.6s infinite ease-in-out alternate-reverse;
+}
+.page__cloud img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   object-position: top;
+}
+
+.page__moon {
+   
+}
+.moon {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.moon__box {
+   width: 90vh;
+   max-width: 80%;
+   transform: translate(-15%, 0px);
+}
+.moon__item {
+   background-color: #000;
+   display: block;
+   padding-bottom: 100%;
+   border-radius: 50%;
+   position: relative;
+   transform-origin: bottom;
+   animation: moon 5s ease alternate forwards 0.5s;
+}
+.moon__item::before {
+   content: '';
+   position: absolute;
+   top: -1%;
+   left: -1%;
+   width: 102%;
+   height: 102%;
+   border-radius: 50%;
+   background-color: #fff;
+
+   animation: moon-line 4s ease alternate forwards 0.5s;
+}

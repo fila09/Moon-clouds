@@ -1,0 +1,37 @@
+@keyframes clouds {
+   0% {
+      transform: rotate(-5deg);
+   }
+   100% {
+      transform: rotate(5deg);
+   }
+}
+@keyframes clouds-show {
+   0% {
+      transform: translateY(-100%);
+   }
+   100% {
+      transform: translateY(0%);
+   }
+}
+
+@keyframes moon {
+   0% {
+      transform: rotate(-10deg);
+   }
+   30% {
+      transform: rotate(10deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+@keyframes moon-line {
+   0% {
+      transform: translateX(0px);
+   }
+   100% {
+      transform: translateX(-30%);
+   }
+}
